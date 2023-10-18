@@ -163,8 +163,3 @@ class ImplicitoVonNeumann:
                 self.dados["t"],
                 self.dados["u"]
                 )
-
-
-disc = ImplicitoVonNeumann(0, 3, 1, 100, 2200, 1)
-disc.plota_2D(360)
-disc.plota_3D()
