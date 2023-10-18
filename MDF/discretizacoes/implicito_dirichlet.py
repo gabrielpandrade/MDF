@@ -138,6 +138,8 @@ class ImplicitoDirichlet:
         *A matriz c tem nt-1 elementos por isso utilizei i-1 e não i
         """
         for i in range(1, self.dados["nt"]):
+            self.dados["u"][i][0] = self.dados["fx"][i - 1]
+            self.dados["u"][i][-1] = self.dados["gx"][i - 1]
             self.dados["u"][i][1:-1] = np.linalg.solve(self.A, self.dados["u"][i - 1][1:-1] + self.c[i - 1])
 
     def plota_2D(self, plots: int):
