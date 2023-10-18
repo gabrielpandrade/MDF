@@ -1,6 +1,7 @@
 from MDF.discretizacoes.crank_nicolson_dirichlet import CrankNicolsonDirichlet
 from MDF.discretizacoes.crank_nicolson_von_neumann import CrankNicolsonVonNeumann
 from MDF.discretizacoes.explicito_dirichlet import ExplicitoDirichlet
+from MDF.discretizacoes.grunwald_letnikov_dirichlet import GrunwaldLetnikovDirichlet
 from MDF.discretizacoes.implicito_dirichlet import ImplicitoDirichlet
 from MDF.discretizacoes.implicito_von_neumann import ImplicitoVonNeumann
 
@@ -16,6 +17,7 @@ a = 1
 # crn_dir = CrankNicolsonDirichlet(L0, Ln, T, nx, nt, a)
 # imp_neu = ImplicitoVonNeumann(L0, Ln, T, nx, nt, a)
 # crn_neu = CrankNicolsonVonNeumann(L0, Ln, T, nx, nt, a)
+# glt_dir = GrunwaldLetnikovDirichlet(L0, Ln, T, nx, nt, 0.1, 1.8)
 
 # exp_dir.plota_2D(6)
 # exp_dir.plota_3D()
@@ -31,3 +33,6 @@ a = 1
 
 # crn_neu.plota_2D(6)
 # crn_neu.plota_3D()
+
+# glt_dir.plota_2D(6)
+# glt_dir.plota3D()
